@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .card {
+      perspective: 1000px;
+    }
+    .card-inner {
+      width: 400px;
+      height: 250px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .card-front {
+      background: #ff6f61;
+      color: white;
+    }
+    .card-back {
+      background: #fff3b0;
+      color: #333;
+      transform: rotateY(180deg);
+      flex-direction: column;
+    }
+    .emoji {
+      font-size: 40px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        🎂 Happy Birthday!
+      </div>
+      <div class="card-back">
+        <div class="emoji">🎉🎁🎂</div>
+        <p>Happy Birthday <b>Rohan Auti</b>!</p>
+        <p>Wishing you joy, success & endless happiness 🚀</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
